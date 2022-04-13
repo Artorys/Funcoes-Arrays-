@@ -1,53 +1,41 @@
-function positions(firstPlace,secondPlace,lastPlace)
+function colocados(firstPlace,secondPlace,lastPlace)
 {
-    if(firstPlace != "Daniel" && secondPlace == "Marcelo")
+    if(firstPlace == "Daniel")
     {
-        secondPlace = "Daniel"
-        lastPlace = "Marcelo"
-
+        firstPlace = competidores[2]
+        console.log(`primeiro colocado :${firstPlace}
+        ,
+        Segundo colocado :${secondPlace}
+        ,
+        Terceiro colocado :${lastPlace}`)
     }
-    else if( firstPlace != "Daniel" && secondPlace == "Nobara")
+    else if(secondPlace == "Daniel")
     {
-        secondPlace = "Daniel"
-        lastPlace = "Nobara"
+        secondPlace = firstPlace
+        firstPlace = competidores[2]
+        console.log(`primeiro colocado :${firstPlace}
+        ,
+        Segundo colocado :${secondPlace}
+        ,
+        Terceiro colocado :${lastPlace}`)
     }
-    else if(firstPlace = "Marcelo" && secondPlace == "Daniel")
+    else if(lastPlace == "Daniel")
     {
-        firstPlace = "Daniel"
-        secondPlace = "Marcelo"
+        lastPlace = secondPlace
+        secondPlace = competidores[2]
+        console.log(`primeiro colocado :${firstPlace}
+        ,
+        Segundo colocado :${secondPlace}
+        ,
+        Terceiro colocado :${lastPlace}`)
     }
-    else if(firstPlace = "Nobara" && secondPlace == "Daniel")
-    {
-        firstPlace = "Daniel"
-        secondPlace = "Marcelo"
-    }
-    else
-    {
-        firstPlace = competidores[0]
-        secondPlace = competidores[1]
-        lastPlace = competidores[2]
-    }
-    let firstPosition = 
-    (
-    `primeiro colocado : ${firstPlace}`
-    )
-    console.log(firstPosition)
-    let secondPosition = 
-    (
-    `segundo colocado : ${secondPlace}`
-    )
-    console.log(secondPosition)
-    let lastPosition = 
-    (
-    `terceiro colocado : ${lastPlace}`
-    )
-    console.log(lastPosition)
-}   
+}
 let competidores = 
 [
-    "Daniel",
-    "Marcelo",
-    "Nobara"
+    `Rafael`, 
+    `Manoel`,
+    `Daniel` 
 ]
-
-positions(competidores[2],competidores[1],competidores[0])
+/*coloque os competidores de acordo
+com a lista competidores,altere a ordem se prescisar*/
+colocados(competidores[0],competidores[2],competidores[1])
