@@ -14,6 +14,5 @@ function colocados(firstPlace,secondPlace,lastPlace){
         
     }
 }
-/*coloque os competidores de acordo
-com a lista competidores,altere a ordem se prescisar*/
+/*Escolha a ordem dos competidores*/
 colocados("Rafael", "Daniel", "Marcos")
