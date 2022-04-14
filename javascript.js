@@ -1,41 +1,19 @@
-function colocados(firstPlace,secondPlace,lastPlace)
-{
-    if(firstPlace == "Daniel")
-    {
-        firstPlace = competidores[2]
-        console.log(`primeiro colocado :${firstPlace}
-        ,
-        Segundo colocado :${secondPlace}
-        ,
-        Terceiro colocado :${lastPlace}`)
+function colocados(firstPlace,secondPlace,lastPlace){
+    let competidores = []
+    if(firstPlace == "Daniel"){
+        competidores.push(firstPlace,secondPlace,lastPlace)
     }
-    else if(secondPlace == "Daniel")
-    {
-        secondPlace = firstPlace
-        firstPlace = competidores[2]
-        console.log(`primeiro colocado :${firstPlace}
-        ,
-        Segundo colocado :${secondPlace}
-        ,
-        Terceiro colocado :${lastPlace}`)
+    if(secondPlace == "Daniel"){
+        competidores.push(secondPlace,firstPlace,lastPlace)
     }
-    else if(lastPlace == "Daniel")
-    {
-        lastPlace = secondPlace
-        secondPlace = competidores[2]
-        console.log(`primeiro colocado :${firstPlace}
-        ,
-        Segundo colocado :${secondPlace}
-        ,
-        Terceiro colocado :${lastPlace}`)
+    if(lastPlace == "Daniel"){
+        competidores.push(firstPlace,lastPlace,secondPlace)
+    }
+    for(let i = 0;i < competidores.length; i++){
+        console.log(`${i + 1}° colocado : ${competidores[i]}`)
+        
     }
 }
-let competidores = 
-[
-    `Rafael`, 
-    `Manoel`,
-    `Daniel` 
-]
 /*coloque os competidores de acordo
 com a lista competidores,altere a ordem se prescisar*/
-colocados(competidores[0],competidores[2],competidores[1])
+colocados("Rafael", "Daniel", "Marcos")
